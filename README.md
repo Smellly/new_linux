@@ -30,6 +30,11 @@ vim --version | grep python
 +cryptv          +linebreak       +python/dyn      +vreplace
 +cscope          +lispindent      +python3/dyn     +wildignore
 ```
+安装 Caffe prototxt 高亮插件  
+```
+cd ~/.vim/bundle
+git clone git://github.com/chiphogg/vim-prototxt.git
+```
 下载YouCompleteMe
 ```
 git clone --recursive https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
