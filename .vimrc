@@ -43,14 +43,15 @@ set fileencodings=utf-8,gbk
 
 " vundle 环境设置
 filetype off
-set rtp+=/data/users/jaycshen/.vim/bundle/Vundle.vim
+set rtp+=/home/jaycshen/.vim/bundle/Vundle.vim
 " vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Yggdroot/indentLine'
+Plugin 'chiphogg/vim-prototxt'
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
