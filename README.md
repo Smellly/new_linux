@@ -44,7 +44,10 @@ git clone --recursive https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundl
 编译
 ```
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer --system-libclang
+# 使用系统clang
+# ./install.py --clang-completer --system-libclang
+# 会自动下载clang
+./install.py --clang-completer
 ```
 下载vundle
 ```
