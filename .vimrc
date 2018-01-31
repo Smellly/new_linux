@@ -1,6 +1,16 @@
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"
- endif
+" PEP8 要支持PEP8风格的缩进，请在.vimrc文件中添加下面的代码：
+" 这些设置将让Vim中的Tab键就相当于4个标准的空格符，确保每行代码长度不超过80个字符，
+" 并且会以unix格式储存文件，避免在推送到Github或分享给其他用户时出现文件转换问题。
+
+au BufNewFile,BufRead *.py
+\ set tabstop=4
+\ set softtabstop=4
+\ set shiftwidth=4
+\ set textwidth=79
+\ set expandtab
+\ set autoindent
+\ set fileformat=unix
+
 "传说中的去掉边框用下边这一句
 set go=
 "设置配色，这里选择的是desert，也有其他方案，在vim中输入:color 在敲tab键可以查看
@@ -52,6 +62,8 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Yggdroot/indentLine'
 Plugin 'chiphogg/vim-prototxt'
+Plugin 'nvie/vim-flake8'                                        |~
+Plugin 'scrooloose/syntastic'
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
