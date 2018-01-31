@@ -47,7 +47,7 @@ set fileencodings=utf-8,gbk
 :autocmd FileType c,cpp :set cindent
 "例如：如果是python类型
 :autocmd FileType python :set number
-:autocmd FileType python : set foldmethod=syntax
+:autocmd FileType python : set foldmethod=indent
 :autocmd FileType python :set smartindent
 
 " vundle 环境设置
