@@ -62,8 +62,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Yggdroot/indentLine'
-Plugin 'chiphogg/vim-prototxt'
-Plugin 'nvie/vim-flake8'                                        |~
+" Plugin 'chiphogg/vim-prototxt'
+Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/syntastic'
 " 插件列表结束
 call vundle#end()
