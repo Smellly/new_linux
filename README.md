@@ -40,8 +40,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~/.vim/bundle
 git clone git://github.com/chiphogg/vim-prototxt.git
 ```
-下载YouCompleteMe（需要全程在系统的 python 环境下编译，然后再切回 anaconda 环境。**不能使用 conda 环境！**）
-[具体做法](https://github.com/Valloric/YouCompleteMe/issues/1241#issuecomment-335051278)
+下载YouCompleteMe（需要全程在系统的 python 环境下编译，然后再切回 anaconda 环境。**不能使用 conda 环境！**）  
+[具体做法](https://github.com/Valloric/YouCompleteMe/issues/1241#issuecomment-335051278)  
 ```
 git clone --recursive https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 # 如果出现异常，进入 ~/.vim/bundle/YouCompleteMe 目录，重复下面的命令知道下载完整。
