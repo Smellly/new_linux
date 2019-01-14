@@ -17,7 +17,7 @@ sudo apt install gcc make libncurses5-dev git python-dev python3-dev build-essen
 ```
 git clone --depth=1 https://github.com/vim/vim.git ~/vim8git
 ```
-编译安装
+编译安装（使用了系统的 python2 和 python3）
 ```
 cd ~/vim8git/
 ./configure --with-features=huge --enable-multibyte --enable-cscope --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-python3interp=yes --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu
@@ -40,7 +40,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~/.vim/bundle
 git clone git://github.com/chiphogg/vim-prototxt.git
 ```
-下载YouCompleteMe
+下载YouCompleteMe（需要全程在系统的 python 环境下编译，然后再切回 anaconda 环境。**不能使用 conda 环境！**）
+[具体做法](https://github.com/Valloric/YouCompleteMe/issues/1241#issuecomment-335051278)
 ```
 git clone --recursive https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 # 如果出现异常，进入 ~/.vim/bundle/YouCompleteMe 目录，重复下面的命令知道下载完整。
@@ -49,9 +50,9 @@ git clone --recursive https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundl
 编译
 ```
 cd ~/.vim/bundle/YouCompleteMe
-# 使用系统clang
+# 使用系统clang （如果需要对 c/cpp 补全）
 # ./install.py --clang-completer --system-libclang
-# 会自动下载clang
+# 自动下载 clang （如果需要对 c/cpp 补全）
 ./install.py --clang-completer
 ```
 
