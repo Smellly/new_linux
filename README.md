@@ -30,6 +30,11 @@ vim --version | grep python
 +cryptv          +linebreak       +python/dyn      +vreplace
 +cscope          +lispindent      +python3/dyn     +wildignore
 ```
+下载vundle
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+记得修改 ```set rtp+=/home/yourname/.vim/bundle/Vundle.vim```路径
 安装 Caffe prototxt 高亮插件  
 ```
 cd ~/.vim/bundle
@@ -49,11 +54,6 @@ cd ~/.vim/bundle/YouCompleteMe
 # 会自动下载clang
 ./install.py --clang-completer
 ```
-下载vundle
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-记得修改 ```set rtp+=/home/yourname/.vim/bundle/Vundle.vim```路径
 
 ### zsh
 ```
