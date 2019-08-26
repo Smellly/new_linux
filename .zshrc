@@ -1,7 +1,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/data/users/jaycshen/.oh-my-zsh
+export ZSH=/home/jaycshen/.oh-my-zsh
 export LC_ALL="en_US.UTF-8"
 # to use scp *
 setopt nonomatch
@@ -53,7 +53,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-wakatime sudo zsh-syntax-highlighting extract)
+plugins=(git sudo extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,3 +88,25 @@ source $ZSH/oh-my-zsh.sh
 function count() {
     ls -l "$1" | grep - | wc -l
 }
+
+function bashLog() {
+    bash_path=$(cd `dirname $0`; pwd)
+    date_now=$(date "+%Y%m%d%H%M%S")
+    bash $1 > $bash_path/$1_$date_now.log 2>&1
+}
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jaycshen/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jaycshen/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jaycshen/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jaycshen/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
