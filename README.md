@@ -1,7 +1,7 @@
 # new_linux
 迁移到一个新的 Linux 的准备
 
-### vim8
+### install vim8
 卸载旧版 vim
 ```
 dpkg -l | grep vim
@@ -66,17 +66,20 @@ sudo apt-get install zsh
 ### oh my zsh
 via curl
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 via wget
 ```
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 ```
 
 ### tmux
 ```
 sudo apt-get install tmux
 ```
+
+### anaconda  
+
 
 ### wakatime
 记录码字的用时
