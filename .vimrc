@@ -14,6 +14,8 @@ au BufNewFile,BufRead *.py
 
 "传说中的去掉边框用下边这一句
 set go=
+"设置背景透明
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
 "设置配色，这里选择的是desert，也有其他方案，在vim中输入:color 在敲tab键可以查看
 color desert
 "设置背景色，每种配色有两种方案，一个light、一个dark
